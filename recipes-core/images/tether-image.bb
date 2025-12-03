@@ -43,4 +43,5 @@ IMAGE_INSTALL:append = " \
     python3-numpy \
     libgphoto2 \
     python3-gphoto2 \
+    python3-rawpy \
 "
