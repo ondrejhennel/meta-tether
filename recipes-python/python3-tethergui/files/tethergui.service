@@ -1,0 +1,15 @@
+[Unit]
+Description=A GTK-based application for tethered capture with digital cameras
+Requires=weston.service
+After=weston.service
+
+[Service]
+Type=simple
+Environment="WAYLAND_DISPLAY=wayland-0"
+Environment="XDG_RUNTIME_DIR=/run/user/0"
+ExecStart=/usr/bin/tether-gui
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target
