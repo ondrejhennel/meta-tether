@@ -1,47 +1,26 @@
-# Base this image on core-image-base
-require recipes-core/images/core-image-base.bb
+SUMMARY = "A custom Wayland/Weston image for a tethered photography device"
+LICENSE = "MIT"
 
-IMAGE_FEATURES:append = " splash ssh-server-openssh weston"
+# Base this image on core-image
+inherit core-image
+
+IMAGE_FEATURES:append = " ssh-server-openssh weston"
 
 IMAGE_INSTALL:append = " \
     packagegroup-base \
-    bash \
-    bzip2 \
-    coreutils \
-    curl \
-    file \
-    findutils \
-    gawk \
-    grep \
-    gzip \
-    less \
-    sed \
-    tar \
-    unzip \
     util-linux \
-    wget \
-    which \
-    xz \
-    \
-    mc \
-    \
-    iputils \
-    iproute2 \
-    iproute2-tc \
-    \
     usbutils \
-    \
+    mc \
+    wget \
+    rsync \
     network-config \
     wpa-supplicant \
     wireless-regdb-static \
-    bluez5 \
+    avahi-daemon \
     \
     gphoto2 \
-    python3 \
-    gtk4 \
-    python3-pygobject \
-    python3-numpy \
-    libgphoto2 \
-    python3-gphoto2 \
-    python3-rawpy \
+    python3-tethergui \
 "
+
+# Add 2 GB extra space for the photos
+IMAGE_ROOTFS_EXTRA_SPACE = "2097152"

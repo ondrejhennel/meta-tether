@@ -20,6 +20,7 @@ RDEPENDS:${PN} = " \
 	python3-pygobject \
 	python3-gphoto2 \
 	python3-core \
+	gtk4 \
 "
 
 do_install:append() {
