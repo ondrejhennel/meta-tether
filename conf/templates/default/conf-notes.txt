@@ -1,0 +1,17 @@
+### Shell environment set up for builds. ###
+
+The default machine is: raspberrypi5
+The default distribution is: tether
+
+Network Configuration:
+    To enable Wi-Fi, please edit 'conf/local.conf' and set the
+    WIFI_COUNTRY, WIFI_SSID and WIFI_PSK_HASH variables.
+
+To start the build, run:
+    bitbake tether-image
+
+Other commonly useful commands are:
+ - 'devtool' and 'recipetool' handle common recipe tasks
+ - 'bitbake-layers' handles common layer tasks
+ - 'oe-pkgdata-util' handles common target package tasks
+
