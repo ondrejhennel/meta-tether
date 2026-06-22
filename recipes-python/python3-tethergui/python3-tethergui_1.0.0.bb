@@ -8,7 +8,7 @@ SRC_URI = " \
 	git://github.com/ondrejhennel/tethergui.git;protocol=https;branch=main \
 	file://tethergui.service \
 "
-SRCREV = "80bc01d1adda5d253c11ede97ac988691f8ae5c3"
+SRCREV = "f00d6e117dc2fa9c8995db84db74858da77bb48c"
 
 S = "${WORKDIR}/git"
 
